@@ -1,0 +1,895 @@
+* {
+    font-family: 'Segoe UI';
+    font-weight: 200;
+    margin: auto;
+    cursor: default;
+}
+
+::-webkit-scrollbar 
+{
+    display: none;
+}
+
+header {
+    background-color: #ffb600;
+    width: 100%;
+    height: 80px;
+    color: #212121;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header #logo img {
+    height: 80px;
+}
+
+header #logo img:hover {
+    cursor: pointer;
+}
+
+header menu ul {
+    margin-left: -30px;
+}
+
+header menu ul li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+header menu ul li a, header menu ul li span {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 24px;
+    color: black;
+    transition: color .2s ease-in-out;
+}
+
+header menu ul li a:hover,header menu ul li span:hover {
+    cursor: pointer;
+    color: white;
+}
+
+#vid {
+    position: relative;
+}
+
+main #mySlider {
+    position: absolute;
+    width: 100%;
+    bottom: 5vw;
+}
+
+main #mySlider .slides {
+    display: flex;
+    font-weight: 400;
+    font-size: 3vw;
+    text-shadow: 2px 2px 10px rgba(0,0,0,1);
+    color: white;
+    margin-left: 10vw;
+    text-decoration: underline #ffb600;
+}
+
+main .dot-container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 6vw;
+}
+
+main .dot {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+main .active, .dot:hover {
+    background-color: #717171;
+}
+
+main #info {
+    width: 100%;
+    height: 350px;
+    background-color: #ffb600;
+    margin-top: -4px;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main #info::after {
+    content: "";
+    position: absolute;
+    width: 190px;
+	height: 350px;
+	transform: skewX(-45deg);
+    right: 175px;
+	background-color: black;
+    border-left: #ffb600 170px double;
+}
+
+main #info .infoWin {
+    z-index: 2;
+    width: 330px;
+    height: 230px;
+    border-radius: 20px;
+    background-color: white;
+    padding: 17px;
+    text-align: center;
+    border: #ffb600 10px double;
+    transition: transform .1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+main #info .infoWin:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.33);
+}
+
+main #info .infoWin h3 {
+    font-weight: 500;
+    font-size: 25px;
+}
+
+main #info .infoWin ul li {
+    margin: 10px;
+    text-align: left;
+    list-style: none;
+    font-size: 20px;
+}
+
+main #info .infoWin a {
+    text-decoration: none;
+    color: #ffb600;
+    font-size: 14px;
+    transition: font-weight .1s ease-in;
+}
+
+main #info .infoWin a:hover {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+main #about {
+    display: flex;
+    flex-direction: column;
+}
+
+main #about::after {
+    content: '';
+    position: absolute;
+    width: 190px;
+	height: 1800px;
+	transform: skewX(-45deg);
+    right: 1250px;
+	background-color: #ffb600;
+    border-left: white 170px double;
+    z-index: -1;
+}
+
+main #about h1 {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    font-size: 63px;
+    border-bottom: #ffb600 5px solid;
+}
+
+main #about #why {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: #ffb600 2px solid;
+    padding-bottom: 60px;
+}
+
+main #about #why h2 {
+    font-size: 45px;
+    font-weight: 400;
+    height: 350px;
+    max-width: 450px;
+    min-width: 350px;
+    line-height: 350px;
+    text-align: center;
+    background-color: #ffb600;
+    margin-right: -50px;
+}    
+
+main #about #why ul li {
+    font-size: 30px;
+    transition: transform .2s ease-in-out;
+}
+
+main #about #why ul li:hover {
+    transform: scale(1.1);
+}
+
+main #about #why .about ul {
+    margin-top: 30px;
+    height: 300px;
+}
+
+.about {
+    width: 650px;
+    font-size: 24px;
+    transition: transform .2s ease-in-out;
+}
+
+.about:hover {
+    transform: scale(1.1);
+}
+
+main #about #obs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    padding: 60px 0px;
+    border-bottom: #ffb600 2px solid;
+}
+
+main #about #obs h2 {
+    font-size: 45px;
+    font-weight: 400;
+    height: 350px;
+    max-width: 450px;
+    min-width: 350px;
+    line-height: 350px;
+    text-align: center;
+    background-color: #ffb600;
+    margin-left: -50px;
+}
+
+main #about #obs h2, main #about #qual h2, main #about #why h2 {
+    transition: transform .2s ease-in-out;
+    box-shadow: 0px 0px 13px 0px #000000;
+}
+
+main #about #obs h2:hover, main #about #qual h2:hover, main #about #why h2:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+main #about #qual h2 {
+    font-size: 45px;
+    font-weight: 400;
+    height: 350px;
+    max-width: 450px;
+    min-width: 350px;
+    line-height: 350px;
+    text-align: center;
+    background-color: #ffb600;
+    margin-right: -50px;
+}
+
+main #about #qual {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0px;
+    border-bottom: #ffb600 2px solid;
+}
+
+main #contact {
+    padding: 60px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main #con {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 63px;
+    max-width: 200px;
+    border-bottom: #ffb600 5px solid;
+}
+
+main #contact #contactForm {
+    width: 440px;
+    height: 800px;
+    background-color: #ffb600;
+    border: black 5px solid;
+    font-size: 24px;
+    padding: 0px 30px;
+    margin-right: -30px;
+}
+
+main #contact #contactForm h1 {
+    font-size: 32px;
+    text-align: center;
+    font-weight: 400;
+    padding: 40px 0px;
+    text-decoration: underline;
+}
+
+main #contact #contactForm #mail, main #contact #contactForm #title {
+    width: 440px;
+    height: 30px;
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+main #contact #contactForm #mail:focus, main #contact #contactForm #title:focus, main #contact #contactForm #msg:focus {
+    background-color: rgb(255, 240, 197);
+}
+
+main #contact #contactForm #msg {
+    width: 440px;
+    height: 300px;
+    font-size: 22px;
+}
+
+main #contact #contactForm #btn {
+    width: 190px;
+    height: 60px;
+    font-size: 25px;
+    font-weight: 400;
+    background-color: rgb(31, 31, 31);
+    color: white;
+    border: black 5px solid;
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
+    transform: translate(130px, 30px);
+}
+
+main #contact #contactForm #btn:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+main #contact h2 {
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    border-bottom: #ffb600 5px solid;
+}
+
+main #contact #phone {
+    width: 440px;
+    height: 800px;
+    padding: 0px 20px;
+    background-color: #ffb600;
+    border: black 5px solid;
+    margin-left: -30px;
+}
+
+main #contact #phone h1 {
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+main #contact #phone h3 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-left: 80px;
+    margin-top: 40px;
+}
+
+main #contact #phone ul li {
+    list-style: none;
+    font-size: 20px;
+    margin-left: 180px;
+}
+
+main #contact p {
+    display: none;
+}
+
+main #title1 {
+    text-align: center;
+    width: 485px;
+    border-bottom: #ffb600 5px solid;
+    font-size: 63px;
+    margin-bottom: 50px;
+}
+
+main #carInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: #ffb600 2px solid;
+    margin-bottom: 20px;
+}
+
+main #carInfo .cars h2 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 500;
+    text-decoration: #ffb600 underline;
+    margin-bottom: 20px;
+}
+
+main #carInfo .cars .carsInfo {
+    flex-direction: column;
+    margin: 50px 0px;
+    padding: 20px;
+    border: #ffb600 3px solid;
+    border-radius: 10px;
+    box-shadow: 0px 0px 9px 0px #000000;
+    transition: transform .2s ease-in-out;
+}
+
+main #carInfo .cars .carsInfo:hover {
+    transform: scale(1.1);
+}
+
+main #carInfo .cars .carsInfo h3 {
+    text-decoration: #ffb600 underline;
+    font-weight: 500;
+    font-size: 22px;
+    text-align: center;
+}
+
+main #carInfo .cars .carsInfo .carImg {
+    width: 300px;
+    height: 300px;
+}
+
+main #carInfo .cars .carsInfo ul {
+    border-top: #ffb600 2px solid;
+    padding-top: 10px;
+}
+
+main #carInfo .cars .carsInfo ul li {
+    list-style: none;
+    font-size: 20px;
+}
+
+main #title2 {
+    text-align: center;
+    border-bottom: #ffb600 5px solid;
+    font-size: 63px;
+    width: 330px;
+    margin-bottom: 50px;
+}
+
+main #order {
+    position: relative;
+    width: 100%;
+    background-color: #ffb600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+main #order::after {
+    content: '';
+    position: absolute;
+    width: 140px;
+    height: 100%;
+    transform: skewX(-45deg);
+    left: 396px;
+    bottom: 0px;
+    background-color: white;
+    border-left: #ffb600 170px double;
+    z-index: 0;
+}
+
+main #order .order {
+    margin: 0px 40px;
+    z-index: 1;
+}
+
+main #order .order h2 {
+    font-size: 27px;
+    padding: 30px 0px 0px 0px;
+}
+
+main #order .order select, main #order .order input {
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+}
+
+main #order .order select, main #order .order #btn{
+    width: 305px;
+}
+
+main #order .order .btn {
+    font-weight: 400;
+    margin-top: 60px;
+    height: 60px;
+    border: black 4px solid;
+    color: white;
+    background-color: rgb(31, 31, 31);
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+main #order .order .btn:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+main #order .order .btn:disabled {
+    cursor: no-drop;
+    color: white;
+    background-color: grey;
+    border-color: rgb(70, 70, 70);
+}
+
+main #order .order select optgroup {
+    font-weight: 500;
+    font-size: 22px;
+}
+
+main #infoForm {
+    position: absolute;
+    bottom: 8px;
+    font-size: 20px;
+    font-weight: 400;
+    color: red;
+}
+
+#summ {
+    display: flex;
+    flex-direction: column;
+}
+
+main #title3 {
+    text-align: center;
+    width: 440px;
+    text-decoration: #ffb600 5px underline;
+    font-size: 63px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 340px 340px;
+    grid-template-rows: 50px 200px;
+    gap: 0px 0px;
+    grid-template-areas:
+        "title1 title2"
+        "con1 con2";
+    border: #ffb600 5px solid;
+}
+
+.con1 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". .";
+    grid-area: con1;
+    text-align: right;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.con15 {
+    font-weight: 400;
+    text-align: right;
+    font-size: 22px;
+}
+
+.con16 {
+    text-align: left;
+    font-size: 22px;
+}
+
+.con2 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". .";
+    grid-area: con2;
+    text-align: right;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.con25 {
+    font-weight: 400;
+    text-align: right;
+    font-size: 22px;
+}
+
+.con26 {
+    text-align: left;
+    font-size: 22px;
+}
+
+.title1 { 
+    grid-area: title1;
+    font-size: 28px;
+    font-weight: 400;
+    text-decoration: #ffb600 underline;
+}
+.title2 { 
+    grid-area: title2; 
+    font-size: 28px;
+    font-weight: 400;
+    text-decoration: #ffb600 underline;
+}
+
+main #back {
+    display: block;
+    height: 80px;
+    width: 200px;
+    text-decoration: none;
+    padding: 10px;
+    margin: 60px auto;
+    background-color: #717171;
+    border: black 4px solid;
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    font-size: 27px;
+    background-color: rgb(31, 31, 31);
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+main #back:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+
+footer {
+    width: 100%;
+    height: 130px;
+    background-color: #ffb600;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 23px;
+    text-align: center;
+    z-index: 1;
+}
+
+footer h3 a {
+    color: white;
+    transition: color .2s ease-in-out;
+}
+
+footer h3 a:hover {
+    cursor: pointer;
+    color: black;
+}
+
+footer::after {
+    content: "";
+    position: absolute;
+    width: 140px;
+	height: 130px;
+	transform: skewX(-45deg);
+    left: 50px;
+	background-color: white;
+    border-left: #ffb600 170px double;
+    z-index: 0;
+}
+
+#top {
+    z-index: 99;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 5px 5px 0px 5px;
+    border-radius: 10%;
+    transition: background-color .2s ease-in-out;
+}
+
+#top i {
+    color: white;
+    font-size: 40px;
+}
+
+#top:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+#top i:hover {
+    cursor: pointer;
+}
+
+#side {
+    display: none;
+    width: 40px;
+    height: 40px;
+    z-index: 99;
+    position: fixed;
+    right: 2px;
+    top: 450px;
+    transform: rotate(90deg);
+}
+
+#side:hover, #side i:hover {
+    cursor: pointer;
+}
+
+#side i {
+    display: none;
+    font-size:  40px;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0,0,0,1);
+}
+
+@media only screen and (max-width: 1260px) {
+    #home menu {
+        position: fixed;
+        right: 30px;
+        top: 330px;
+        flex-direction: column;
+        z-index: 99;
+        width: 158px;
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    #home menu ul {
+        padding-left: 0px;
+    }
+    
+    #home menu ul li {
+        display: block;
+        margin-top: 30px;
+        transition: transform .2s ease-in-out;
+    }
+
+    #home menu ul li:hover {
+        transform: translateX(-15px);
+    }
+
+    #home menu ul li a, header menu ul li span {
+        color: white;
+        text-shadow: 2px 2px 10px rgba(0,0,0,1);
+    }
+
+    main #mySlider .slides {
+        display: flex;
+        font-weight: 400;
+        font-size: 24px;
+    }
+
+    main .dot-container {
+        display: none;
+    }
+
+    main #info {
+        flex-direction: column;
+        height: 1000px;
+    }
+
+    main #info::after {
+        height: 1000px;
+        right: 500px;
+    }
+
+    main #about::after {
+        right: 900px;
+    }
+
+    .about {
+        width: auto;
+        max-width: 650px;
+        margin: 0px 25px;
+    }
+
+    .about:hover {
+        transform: none;
+    }
+
+    main #about #why {
+        flex-direction: column;
+    }
+
+    main #about #why h2 {
+        margin-right: 0px;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    main #about #why h2:hover {
+        transform: none;
+    }
+
+    main #about #why ul {
+        margin-left: 30px;
+    }
+
+    main #about #why ul li:hover {
+        transform: none;
+    }
+
+    main #about #obs {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    main #about #obs h2 {
+        margin-left: 0px;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    main #about #obs h2:hover {
+        transform: none;
+    }
+
+    main #about #qual {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main #about #qual h2 {
+        margin-left: 0px;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    main #about #qual h2:hover {
+        transform: none;
+    }
+
+    main #contact #contactForm, main #contact #phone, main #contact h2 {
+        display: none;
+    }
+
+    main #contact {
+        flex-direction: column;
+    }
+
+    main #contact #phone, main #contact #contactForm {
+        margin: auto;
+    }
+
+    main #contact p {
+        display: block;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    main #contact p:hover {
+        cursor: pointer;
+        text-decoration: #ffb600 underline;
+    }
+
+    #side, #side i {
+        display: block;
+    }
+
+    main #order::after {
+        width: 90px;
+        left: 361px;
+        border-left: #ffb600 100px double;
+    }
+
+    footer {
+        height: 80px;
+    }
+    
+    footer h3 {
+        font-size: 15px;
+    }
+
+    footer::after {
+        width: 90px;
+        height: 80px;
+        left: 40px;
+        border-left: #ffb600 100px double;
+    }
+}
+
